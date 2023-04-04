@@ -1,0 +1,75 @@
+--Stopwords--
+
+What are stop words?
+The words which are generally filtered out before processing a natural language are called stop words. 
+These are actually the most common words in any language (like articles, prepositions, pronouns, conjunctions, etc) 
+and does not add much information to the text. 
+Examples of a few stop words in English are “the”, “a”, “an”, “so”, “what”
+
+
+--Stemming---
+
+Stemming, in Natural Language Processing (NLP), 
+refers to the process of reducing a word to its word stem that affixes to suffixes and prefixes or the roots.
+While a stemming algorithm is a linguistic normalization process in 
+which the variant forms of a word are reduced to a standard form. 
+It is a technique used to extract the base form of the words by removing affixes from them. 
+It is just like cutting down the branches of a tree to its stems. 
+For example, the stem of the words “eating,” “eats,” “eaten” is “eat.
+
+
+--Lemmization--
+
+The purpose of lemmatization is same as that of stemming but overcomes the drawbacks of stemming. 
+In stemming, for some words, it may not give may not give meaningful representation such as “Histori”. 
+Here, lemmatization comes into picture as it gives meaningful word.
+Lemmatization takes more time as compared to stemming because it finds meaningful word/ representation. 
+Stemming just needs to get a base word and therefore takes less time.
+Stemming has its application in Sentiment Analysis while 
+Lemmatization has its application in Chatbots, human-answering.
+
+
+--Chunking--
+
+While tokenizing allows you to identify words and sentences, chunking allows you to identify phrases.
+    Note: A phrase is a word or group of words that works as a single unit to perform a grammatical function. 
+    Noun phrases are built around a noun.
+Chunking makes use of POS tags to group words and apply chunk tags to those groups. 
+Chunks don’t overlap, so one instance of a word can be in only one chunk at a time.
+
+
+--Chinking--
+
+Chinking is used together with chunking, but while chunking is used to include a pattern, chinking is used to exclude a pattern.
+
+
+--Using Named Entity Recognition (NER)--
+
+Named entities are noun phrases that refer to specific locations, people, organizations, and so on. 
+With named entity recognition, you can find the named entities in your texts and 
+also determine what kind of named entity they are. Examples:
+    ORGANIZATION	Georgia-Pacific Corp., WHO
+    PERSON	Eddy Bonte, President Obama
+    LOCATION	Murray River, Mount Everest
+    ...
+
+
+--Using a Concordance--
+
+When you use a concordance, you can see each time a word is used, along with its immediate context. 
+This can give you a peek into how a word is being used at the sentence level and what words are used with it.
+Dipping into a corpus with a concordance won’t give you the full picture, 
+but it can still be interesting to take a peek and see if anything stands out.
+
+
+--Frequency Distribution--
+
+With a frequency distribution, you can check which words show up most frequently in your text.
+
+--Vader (Valence Aware Dictionary and sEntiment Reasoner)--
+
+NLTK already has a built-in, pretrained sentiment analyzer called VADER (Valence Aware Dictionary and sEntiment Reasoner).
+
+Since VADER is pretrained, you can get results more quickly than with many other analyzers. 
+However, VADER is best suited for language used in social media, like short sentences with some slang and abbreviations. 
+It’s less accurate when rating longer, structured sentences, but it’s often a good launching point.
