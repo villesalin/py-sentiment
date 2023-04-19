@@ -3,6 +3,12 @@
   "description": "Sentiment analysis",
   "version": "1.0",
   "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [ 
+    "contextMenus"
+  ],
   "action": {
     "default_popup": "hello.html"
   }
