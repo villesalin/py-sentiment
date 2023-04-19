@@ -3,6 +3,8 @@ from random import shuffle
 from nltk.sentiment import SentimentIntensityAnalyzer
 import nltk
 
+import numpy as np
+import pandas as pd
 from pprint import pprint
 
 nltk.download([
@@ -183,3 +185,8 @@ for word in common_set:
 
 top_100_positive = {word for word, count in positive_fd.most_common(100)}
 top_100_negative = {word for word, count in negative_fd.most_common(100)}
+
+# df = pd.read_csv(
+#     "C:/Users/Aapo/py-sentiment/python/TextFiles/reviews.csv", sep="\t")
+
+# print(df.head(99))
