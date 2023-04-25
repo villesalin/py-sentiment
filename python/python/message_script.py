@@ -7,6 +7,7 @@
 import sys
 import json
 import struct
+import sentiment_script as sen
 
 # Read a message from stdin and decode it.
 def getMessage():
@@ -36,6 +37,7 @@ def sendMessage(encodedMessage):
 
 while True:
     receivedMessage = getMessage()
-    sendMessage(encodeMessage(receivedMessage + " Hyvät kelit"))
+    response = sen.is_pos_or_neg(receivedMessage)
+    sendMessage(encodeMessage(response))
 
 # The above taken from https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging#app_side

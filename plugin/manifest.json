@@ -6,7 +6,7 @@
 	"background": {
 		"service_worker": "background.js"
 	},
-	"permissions": ["contextMenus", "nativeMessaging", "scripting", "activeTab"],
+	"permissions": ["contextMenus", "nativeMessaging", "scripting", "activeTab", "notifications"],
 	"action": {
 		"default_popup": "hello.html"
 	}

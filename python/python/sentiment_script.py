@@ -72,10 +72,10 @@ def is_pos_or_neg(custom_string):
     negative_tokens_for_model = get_tweets_for_model(
         negative_cleaned_tokens_list)
 
-    positive_dataset = [(tweet_dict, "Positive")
+    positive_dataset = [(tweet_dict, "positive")
                         for tweet_dict in positive_tokens_for_model]
 
-    negative_dataset = [(tweet_dict, "Negative")
+    negative_dataset = [(tweet_dict, "negative")
                         for tweet_dict in negative_tokens_for_model]
 
     dataset = positive_dataset + negative_dataset
