@@ -1,4 +1,0 @@
--Sentiment analysis-
-tech structure
-
-NLTK library
