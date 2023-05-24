@@ -9,5 +9,5 @@ nltk.download('averaged_perceptron_tagger')
 nltk.download('stopwords')
 
 with contextlib.closing(zipfile.ZipFile('py-sentiment.zip', "r")) as z:
-   z.extractall("C:\\FragFrog")
+   z.extractall("C:\\FragFrog\\py-sentiment")
    
