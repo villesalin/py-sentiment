@@ -9,7 +9,18 @@ import re
 import string
 import random
 
+""" 
+remove_noise(tweet_tokens, stop_words=()):
+    Input:  tweet_tokens (a list of tokens representing a tweet), 
+            stop_words (optional list of stopwords to be removed)
+    Output: cleaned_tokens (a list of cleaned tokens)
 
+    This function removes noise from the tweet tokens by performing the following operations:
+        -Removing URLs using regular expressions.
+        -Removing Twitter handles (user mentions).
+        -Lemmatizing the tokens based on their part of speech (noun, verb, adjective).
+        -Filtering out tokens that are punctuation or stopwords.
+"""
 def remove_noise(tweet_tokens, stop_words=()):
 
     cleaned_tokens = []
@@ -33,18 +44,28 @@ def remove_noise(tweet_tokens, stop_words=()):
             cleaned_tokens.append(token.lower())
     return cleaned_tokens
 
+"""
+get_tweets_for_model(cleaned_tokens_list):
+    Input: cleaned_tokens_list (a list of lists of cleaned tokens)
+    Output: Generator that yields a dictionary of token:True pairs for each tweet tokens list
 
-def get_all_words(cleaned_tokens_list):
-    for tokens in cleaned_tokens_list:
-        for token in tokens:
-            yield token
-
-
+    This function iterates over the cleaned tokens list and 
+    yields a dictionary where each token is a key with a value of True.
+"""
 def get_tweets_for_model(cleaned_tokens_list):
     for tweet_tokens in cleaned_tokens_list:
         yield dict([token, True] for token in tweet_tokens)
 
+"""
+is_pos_or_neg(custom_string):
+    Input: custom_string (a string representing a custom tweet)
+    Output: "positive" or "negative" (the sentiment classification for the custom tweet)
 
+    This function performs sentiment classification for a custom tweet
+    by using the Naive Bayes classifier trained on the positive and negative tweet datasets.
+    It tokenizes the custom string, removes noise from the tokens, 
+    and then uses the classifier to predict the sentiment.
+"""
 def is_pos_or_neg(custom_string):
     stop_words = stopwords.words('english')
 
@@ -76,12 +97,10 @@ def is_pos_or_neg(custom_string):
     random.shuffle(dataset)
 
     train_data = dataset[:7000]
-    test_data = dataset[7000:]
 
     classifier = NaiveBayesClassifier.train(train_data)
 
     custom_tokens = remove_noise(word_tokenize(custom_string))
 
     return classifier.classify(dict([token, True] for token in custom_tokens))
-
 
