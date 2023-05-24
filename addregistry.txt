@@ -1,0 +1,1 @@
+REG ADD "HKCU\Software\Google\Chrome\NativeMessagingHosts\fi.tuni.sentiment" /ve /t REG_SZ /d "C:\FragFrog\py-sentiment\fi.tuni.sentiment.json" /f

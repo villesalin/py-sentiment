@@ -1,7 +1,7 @@
 {
 	"name": "fi.tuni.sentiment",
 	"description": "Sentiment analysis plugin",
-	"path": "C:\\Users\\ragei\\py-sentiment\\python\\python\\message_script.bat",
+	"path": "C:\\FragFrog\\py-sentiment\\python\\python\\message_script.bat",
 	"type": "stdio",
-	"allowed_origins": ["chrome-extension://gnbjcpeoepnelidoliodnkkdmhhbcmid/"]
+	"allowed_origins": ["chrome-extension://aeaheingejlebapmfbddjdfhhdafpkia/"]
 }

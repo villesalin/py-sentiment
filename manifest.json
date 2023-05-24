@@ -4,10 +4,10 @@
 	"version": "1.0",
 	"manifest_version": 3,
 	"background": {
-		"service_worker": "background.js"
+		"service_worker": "./plugin/background.js"
 	},
 	"permissions": ["contextMenus", "nativeMessaging", "scripting", "activeTab", "notifications"],
 	"action": {
-		"default_popup": "hello.html"
+		"default_popup": "./plugin/hello.html"
 	}
 }

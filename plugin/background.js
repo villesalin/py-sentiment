@@ -5,7 +5,7 @@ port.onMessage.addListener(function (msg) {
 	chrome.notifications.create("", {
 		title: "Sentiment Analysis",
 		message: `Your piece of text was ${msg}`,
-		iconUrl: "/hi.png",
+		iconUrl: "./hi.png",
 		type: "basic",
 	});
 });
@@ -22,23 +22,9 @@ chrome.contextMenus.onClicked.addListener(function (clickData) {
 		chrome.notifications.create("", {
 			title: "Sentiment Analysis",
 			message: `Analyzing...`,
-			iconUrl: "/hi.png",
+			iconUrl: "./hi.png",
 			type: "basic",
 		});
 		port.postMessage(clickData.selectionText);
 	}
 });
-
-// chrome.windows.create({
-// 	width: 350,
-// 	height: 250,
-// 	top: 200,
-// 	left: 400,
-// 	type: 'popup',
-// 	url: 'hello.html',
-// });
-// console.log('Hello');
-//});
-// port.onMessage.addListener(function (msg) {
-// 	console.log('Received' + msg);
-// });
