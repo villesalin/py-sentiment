@@ -1,7 +1,7 @@
 {
 	"name": "fi.tuni.sentiment",
 	"description": "Sentiment analysis plugin",
-	"path": "/home/ville/Documents/Skole/projekti/py-sentiment/python/python/message_script.py",
+	"path": "C:\\Users\\ragei\\py-sentiment\\python\\python\\message_script.bat",
 	"type": "stdio",
-	"allowed_origins": ["chrome-extension://liobkefomleodpkhgkbefhhifllehglj/"]
+	"allowed_origins": ["chrome-extension://gnbjcpeoepnelidoliodnkkdmhhbcmid/"]
 }

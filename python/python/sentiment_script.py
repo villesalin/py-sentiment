@@ -2,19 +2,12 @@ from nltk.corpus import twitter_samples
 from nltk.tag import pos_tag
 from nltk.stem.wordnet import WordNetLemmatizer
 from nltk.corpus import stopwords
-from nltk import classify, NaiveBayesClassifier, FreqDist
+from nltk import NaiveBayesClassifier
 from nltk.tokenize import word_tokenize
 
-import nltk
 import re
 import string
 import random
-
-nltk.download('twitter_samples')
-nltk.download('punkt')
-nltk.download('wordnet')
-nltk.download('averaged_perceptron_tagger')
-nltk.download('stopwords')
 
 
 def remove_noise(tweet_tokens, stop_words=()):
@@ -92,6 +85,3 @@ def is_pos_or_neg(custom_string):
     return classifier.classify(dict([token, True] for token in custom_tokens))
 
 
-# custom_tweet = "I ordered just once from TerribleCo, they screwed up, never used the app again."
-
-# print(is_pos_or_neg(custom_tweet))
